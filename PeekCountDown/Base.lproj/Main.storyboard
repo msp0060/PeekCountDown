@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PeekCountDown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daytime" translatesAutoresizingMaskIntoConstraints="NO" id="7ip-0m-Kr6" userLabel="BackgroundImage">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="b3l-Lx-OIv">
+                                <rect key="frame" x="36.666666666666657" y="34" width="320" height="784"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed, 28 Dec 2022 14:59:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZZ-Pa-JCh" userLabel="dateTime">
+                                        <rect key="frame" x="9.6666666666666572" y="0.0" width="300.66666666666674" height="57.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3Z-Fz-LbF" userLabel="PickerOne">
+                                        <rect key="frame" x="0.0" y="82.333333333333343" width="320" height="446.33333333333326"/>
+                                        <color key="backgroundColor" red="0.047058823530000002" green="0.13725490200000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aij-6M-GHZ" userLabel="startStopButton">
+                                        <rect key="frame" x="109" y="553.66666666666663" width="101.66666666666669" height="71"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.40000000000000002"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Start/Stop">
+                                            <color key="baseBackgroundColor" red="0.047058823530000002" green="0.13725490200000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="startStopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fML-pB-he5"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining: 00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBR-Wc-xzh" userLabel="timeRemainingLabel">
+                                        <rect key="frame" x="23" y="649.66666666666663" width="273.66666666666669" height="134.33333333333337"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7ip-0m-Kr6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1Ft-QM-cub"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b3l-Lx-OIv" secondAttribute="bottom" id="2Q7-MK-FMk"/>
+                            <constraint firstItem="b3l-Lx-OIv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2p0-Gw-bg0"/>
+                            <constraint firstAttribute="bottom" secondItem="7ip-0m-Kr6" secondAttribute="bottom" id="7i0-7e-qv4"/>
+                            <constraint firstItem="7ip-0m-Kr6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="ODz-37-3l7"/>
+                            <constraint firstItem="b3l-Lx-OIv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cDZ-kK-FfV"/>
+                            <constraint firstItem="7ip-0m-Kr6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wVn-Id-KCO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="7ip-0m-Kr6" id="gEV-0t-X2c"/>
+                        <outlet property="dateTime" destination="5ZZ-Pa-JCh" id="35q-zr-CHH"/>
+                        <outlet property="picker" destination="p3Z-Fz-LbF" id="C1f-6B-I2e"/>
+                        <outlet property="startStopButton" destination="aij-6M-GHZ" id="Vdc-kt-TQh"/>
+                        <outlet property="timeRemaining" destination="dBR-Wc-xzh" id="97c-60-1or"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="daytime" width="410.66665649414062" height="274"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
